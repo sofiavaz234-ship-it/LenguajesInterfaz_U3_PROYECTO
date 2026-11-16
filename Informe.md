@@ -182,16 +182,3 @@ Dejaron de repetirse los `push` y `pop` manuales en cada procedimiento, la rutin
 | Regla adicional del negocio (mayoreo de 3 o mas unidades) | Opcion `4` -> `LAB-101` -> `4` | Importe base `1002.00 MXN`, aplica 10% (`901.80 MXN`), muestra aviso y baja existencia a `14`. | Muestra *">> AVISO: Descuento de mayoreo (10%) aplicado."*, cobra `901.80 MXN` y deja existencia en `14`. |
 | Ventas rechazadas (sin stock / stock insuficiente) | Opcion `4` -> `LAB-102` (existencia `0`); luego `LAB-101` (existencia `14`) con cantidad `20` | No deja vender `LAB-102` y rechaza vender `20` piezas de `LAB-101`. | Imprime *"no tiene existencias para vender"* en `LAB-102` y *"No hay suficiente existencia"* en `LAB-101`. |
 | Resumen, guardado y carga persistente | Opcion `5`, Opcion `6` (Salir), abrir de nuevo el `.exe` y Opcion `2` | Muestra `14` unidades, inventario `3507.00 MXN`, ingresos `1402.80 MXN`; al reiniciar conserva los datos. | El resumen muestra las cantidades exactas y al volver a abrir el programa carga `LAB-101` y `LAB-102` desde `catalogo.dat`. |
-
-### 5. Instrucciones de compilacion y ejecucion
-
-1. Abrir el proyecto (`GlamourMakeup.sln`) en **Visual Studio** con MASM activado y la libreria **Irvine32** configurada en `C:\Irvine`.
-2. Revisar que la plataforma este en **x86** (32 bits).
-3. Compilar con `Ctrl + Shift + B` y correr con `Ctrl + F5`.
-4. Si se compila desde la consola (Developer Command Prompt for VS):
-
-```bat
-ml /c /coff /Zi /I C:\Irvine main.asm
-link /SUBSYSTEM:CONSOLE /LIBPATH:C:\Irvine main.obj Irvine32.lib kernel32.lib user32.lib
-main.exe
-```
