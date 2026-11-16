@@ -1,6 +1,6 @@
 # Informe - Proyecto Unidad 2 y 3
 
-**Materia:** Lenguajes de Interfaz | **Alumna:** Natalia Lopez Ibarra, Frida Sofia Vega Vazquez | **Docente:** Dr. Jose Luis Medina Jimenez
+**Materia:** Lenguajes de Interfaz | **Alumnas:** Natalia Lopez Ibarra, Frida Sofia Vega Vazquez | **Docente:** Dr. Jose Luis Medina Jimenez
 
 ## 1. Negocio elegido
 Tienda de maquillaje "Glamour Makeup Sinaloa": cosmeticos con codigo `ABC-123` (ej. `LAB-101` labial, `RIM-202` rimel).
