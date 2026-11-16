@@ -1,7 +1,7 @@
 # Proyecto U3 - Sistema de Ventas e Inventario (Glamour Makeup Sinaloa)
 
 - **Materia:** Lenguajes de Interfaz - Unidad 3
-- **Alumna:** Natalia Lopez Ibarra y Frida Sofia Vega Vazquez
+- **Alumnas:** Natalia Lopez Ibarra y Frida Sofia Vega Vazquez
 - **Horario:** 9am-10am y 8am-9am
 - **Docente:** Dr. Jose Luis Medina Jimenez
 
