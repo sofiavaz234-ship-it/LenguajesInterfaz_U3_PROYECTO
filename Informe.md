@@ -50,7 +50,7 @@ RIM-202 | Rimel Waterproof | 145.00 MXN | 40
 
 ## Version de la Unidad 3
 
-Para esta version se reorganizo y limpio el codigo del proyecto (`GlamourMakeup_U3.asm`) conservando las mismas funciones, validaciones y la regla del 10% de descuento en mayoreo, pero sustituyendo las partes repetidas por procedimientos mas cortos, macros y la directiva `USES`.
+Para esta version se reorganizo y limpio el codigo del proyecto (`main.asm`) conservando las mismas funciones, validaciones y la regla del 10% de descuento en mayoreo, pero sustituyendo las partes repetidas por procedimientos mas cortos, macros y la directiva `USES`.
 
 ### 1. Tabla de antes y despues
 
@@ -65,7 +65,7 @@ Para esta version se reorganizo y limpio el codigo del proyecto (`GlamourMakeup_
 
 ### 2. Fragmentos representativos
 
-Todos los ejemplos estan en el archivo **`GlamourMakeup_U3.asm`**.
+Todos los ejemplos estan en el archivo **`main.asm`**.
 
 **A. Procedimiento reutilizado (`RegistrarMovimientoInventario`)**
 Se usa tanto en `RecibirMercancia` (mandando `strEntradaTag`) como en `VenderProducto` (mandando `strSalidaTag`):
@@ -160,7 +160,7 @@ CalcularTotalVenta ENDP
 - **Por que macro o procedimiento:** Se usaron **macros** (`mImprimir`, `mLeerCadena`, `mCopiarBloque`, `mIrAlFinCadena`, `mGuardarArchivo`) para bloques cortos de 2 a 6 instrucciones que se repetian mucho, donde hacer un `CALL` meteria trabajo extra innecesario en la pila. En cambio, se hicieron **procedimientos** para las partes que llevan ciclos, validaciones o cuentas (`ValidarFormatoCodigo`, `CalcularTotalVenta`, `RegistrarMovimientoInventario`, etc.) para no repetir esas instrucciones en el ejecutable.
 - **Criterio de conteo de lineas:** Se contaron solo las **lineas efectivas de codigo fuente** en los dos archivos `.asm` (directivas, variables, macros e instrucciones), sin contar renglones en blanco ni comentarios (`;`).
 
-| Seccion del archivo `.asm` | Unidad 2 (`GlamourMakeup_U2.asm`) | Unidad 3 (`GlamourMakeup_U3.asm`) | Diferencia |
+| Seccion del archivo `.asm` | Unidad 2 (`main.asm` original) | Unidad 3 (`main.asm` actualizado) | Diferencia |
 |---|---|---|---|
 | Directivas (`INCLUDE`, `EQU`) | 3 | 3 | 0 |
 | Definicion de Macros | 0 | 33 | +33 |
@@ -191,7 +191,7 @@ Dejaron de repetirse los `push` y `pop` manuales en cada procedimiento, la rutin
 4. Si se compila desde la consola (Developer Command Prompt for VS):
 
 ```bat
-ml /c /coff /Zi /I C:\Irvine GlamourMakeup_U3.asm
-link /SUBSYSTEM:CONSOLE /LIBPATH:C:\Irvine GlamourMakeup_U3.obj Irvine32.lib kernel32.lib user32.lib
-GlamourMakeup_U3.exe
+ml /c /coff /Zi /I C:\Irvine main.asm
+link /SUBSYSTEM:CONSOLE /LIBPATH:C:\Irvine main.obj Irvine32.lib kernel32.lib user32.lib
+main.exe
 ```
