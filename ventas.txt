@@ -1,0 +1,2 @@
+[VENTA]   Codigo: LAB-101 | Importe: 189.50 MXN
+[VENTA]   Codigo: RIM-202 | Importe: 391.50 MXN

@@ -1,0 +1,6 @@
+[ENTRADA] Codigo: LAB-101 | Cantidad actual: 25
+[ENTRADA] Codigo: RIM-202 | Cantidad actual: 40
+[ENTRADA] Codigo: BAS-303 | Cantidad actual: 12
+[ENTRADA] Codigo: SOM-404 | Cantidad actual: 2
+[SALIDA]  Codigo: LAB-101 | Cantidad actual: 24
+[SALIDA]  Codigo: RIM-202 | Cantidad actual: 37
